@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const {LogoText, Shape, SVG} = require('./svgLogo/svg.js');
 
 
 // array of questions for user
@@ -30,7 +31,10 @@ const questions = [{
 function init() {
     inquirer.prompt(questions)
         .then((response) => {
-            console.log(response);
+            const logoText = new LogoText(response.letters, response.fontColor);
+            const shape = new Shape(response.shape, response.shapeColor);
+            const svg = new SVG(logoText.render(), shape.render());
+            console.log(svg.render());
         });
 }
 
