@@ -10,3 +10,7 @@ The SVG logo maker is a command-line application
 
 #### Link to the walkthrough video:
 
+https://drive.google.com/file/d/1fsmBj-YyejtYlBbb9005-lYYB_xeQLfr/view
+
+
+
