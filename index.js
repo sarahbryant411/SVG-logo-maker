@@ -35,6 +35,10 @@ function init() {
             const shape = new Shape(response.shape, response.shapeColor);
             const svg = new SVG(logoText.render(), shape.render());
             console.log(svg.render());
+            fs.writeFile('logo.svg', svg.render(), (err) => {
+                if (err) throw err;
+                console.log('The file has been saved!');
+            });
         });
 }
 
